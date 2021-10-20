@@ -1,0 +1,109 @@
+<html>
+<head>
+<title></title>
+
+<!-- Google Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<!-- JQuery starts here: -->
+	<script type="text/javascript">
+
+		$("document").ready( function() {
+		
+			// Using class=".conlinks" for all the links
+			$(".daylinks").click( function () {
+			
+				var daynum = $(this).attr("id").substring( 3 );
+				
+				$(".weatherclass").hide();
+				$("#weather" + daynum).show("fade");
+			
+
+
+			} );//ends daylinks click function
+		
+		} ); // ends document.ready
+</script>
+<style type="text/css">
+
+body {
+	background-color: #454F8C;
+	font-family: arial;
+	color: #454F8C;
+	text-align: center;
+}
+
+#contentwrap {
+	background: #F4F5E7;
+	border: 8px #FF9E01 solid;
+	padding: 20px;
+	width: 700px;
+	margin: 20px auto 0px auto;
+	border-radius: 25px;
+}
+
+#heading {
+	font-size: 2.2em;
+	border-bottom: 6px #484452 double;
+	padding: 10px 0px 10px 0px;
+	margin-bottom: 10px;
+}
+
+#links {
+	text-align: center;
+}
+
+.weatherclass {
+	display: none;
+	margin-bottom: 20px;
+}
+
+.spacer {
+	margin-bottom: 10px;	
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="contentwrap">
+
+	<div id="heading">Click on a Link to Show Weather</div>	
+
+	<div id="links">
+
+		<div class="spacer"><a href="javascript:void(0);" class="daylinks" id="day1">Monday</a></div>
+			<div id="weather1" class="weatherclass">Sunny with a chance of rain - 80 degrees</div>	
+		
+		<div class="spacer"><a href="javascript:void(0);" class="daylinks" id="day2">Tuesday</a></div>
+			<div id="weather2" class="weatherclass">Snow falling all day, high of 20 </div>
+			
+		<div class="spacer"><a href="javascript:void(0);" class="daylinks" id="day3">Wednesday</a></div>
+			<div id="weather3" class="weatherclass">Sunny, high of 90 chance of hail degrees</div>
+		
+		<div class="spacer"><a href="javascript:void(0);" class="daylinks" id="day4">Thursday</a></div>
+			<div id="weather4" class="weatherclass">Chilli with a chance of snow</div>
+		
+		<div class="spacer"><a href="javascript:void(0);" class="daylinks" id="day5">Friday</a></div>
+			<div id="weather5" class="weatherclass">Beautiful day, sunny with lots of fog</div>
+			
+	
+	</div> <!-- ends div#links -->
+
+
+
+</div> <!-- ends div#contentwrap -->
+
+
+
+</body>
+
+</html>
+
+
+
+
+
